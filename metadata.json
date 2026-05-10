@@ -1,0 +1,8 @@
+{
+  "name": "AIMAS",
+  "description": "MUNDO AIMAS",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": []
+}

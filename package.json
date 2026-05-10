@@ -1,0 +1,38 @@
+{
+  "name": "chat-with-maps-live",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@google/genai": "1.33.0",
+    "@headlessui/react": "2.2.9",
+    "@supabase/supabase-js": "^2.105.4",
+    "@vis.gl/react-google-maps": "1.7.1",
+    "classnames": "2.5.1",
+    "eventemitter3": "5.0.1",
+    "fast-deep-equal": "3.1.3",
+    "lodash": "4.17.21",
+    "nuqs": "2.8.3",
+    "path": "0.12.7",
+    "react": "19.2.2",
+    "react-dom": "19.2.2",
+    "react-markdown": "9.1.0",
+    "remark-gfm": "4.0.1",
+    "vite": "7.2.7",
+    "zod": "4.1.13",
+    "zustand": "5.0.9"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/server-github": "^2025.4.8",
+    "@modelcontextprotocol/server-postgres": "^0.6.2",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
