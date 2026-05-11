@@ -10,14 +10,31 @@ export default defineConfig(({ mode }) => {
         host: '0.0.0.0',
       },
       plugins: [react()],
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              // React and ecosystem
+              'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+              // Data layer
+              'vendor-supabase': ['@supabase/supabase-js'],
+              // Google Maps (heavy WebGL)
+              'vendor-maps': ['@vis.gl/react-google-maps'],
+              // AI logic
+              'vendor-gemini': ['@google/genai'],
+              // UI Icons
+              'vendor-icons': ['lucide-react'],
+              // State management
+              'vendor-state': ['zustand']
+            }
+          }
+        },
+        chunkSizeWarningLimit: 600,
       }
     };
 });

@@ -6,7 +6,7 @@
 import { useState, useCallback, useRef } from 'react';
 import { GoogleGenAI } from '@google/genai';
 
-const API_KEY = process.env.GEMINI_API_KEY as string;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY as string;
 
 /** System prompt para la IA Arquitecta de onboarding */
 const ONBOARDING_SYSTEM_PROMPT = `Eres Aimas, la IA Arquitecta de Mundo Aimas 🏗️
